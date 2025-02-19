@@ -78,7 +78,7 @@ const targetNode = document.body;
 const config = { childList: true, subtree: true };
 
 // Callback function to execute when mutations are observed
-const callback = (mutationList: any, observer: any) => {
+const callback = (mutationList: any) => {
 
     for (const mutation of mutationList) {
         if (mutation.type === "childList") {
@@ -146,7 +146,7 @@ let currentPage = 1; // 현재 페이지
 
 function pagination() {
    
-    displayItems(currentPage, itemsPerPage);
+    displayItems(itemsPerPage);
     triggerPagination();
     
 }
@@ -167,7 +167,7 @@ function sliceIntoChunks(itemsPerPage: number) {
 }
 
 // 2. 페이지별로 아이템 표시
-function displayItems(page: number, itemsPerPage: number) {
+function displayItems(itemsPerPage: number) {
     const chunks = sliceIntoChunks(itemsPerPage);
 
     // undefined 방지
@@ -228,7 +228,7 @@ function triggerPagination() {
 
     showBtn.addEventListener('click', () => {
         currentPage++;
-        displayItems(currentPage, itemsPerPage);
+        displayItems(itemsPerPage);
     });
 }
 
@@ -568,7 +568,7 @@ function tab() {
 function accordion() {
     const items = document.querySelectorAll('.accordion__item') as NodeListOf<HTMLLIElement>;
 
-    items.forEach((item, index) => {
+    items.forEach((item) => {
         const head = item.querySelector('.accordion__head') as HTMLDivElement;
         const toggleBtn = item.querySelector('.toggle__btn') as HTMLSpanElement;
         const toggleIcon = toggleBtn.querySelector('.icon') as HTMLElement;
@@ -691,7 +691,7 @@ function validation() {
  * 
  */
 function carousel() {
-    const swiper = new Swiper('.swiper', {
+    new Swiper('.swiper', {
         modules: [Navigation, Pagination, Autoplay],
         effect: 'coverflow',
         // swiper 3D 속성 지정
@@ -706,13 +706,13 @@ function carousel() {
         slidesPerView: 5, // 한 번에 보여질 슬라이드 수
         spaceBetween: 0, // 슬라이드 간 간격 (px)
         loop: true, // 무한 루프
-      
+
         // 네비게이션 버튼
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-      
+
         // 페이지네이션
         pagination: {
             el: '.swiper-pagination',

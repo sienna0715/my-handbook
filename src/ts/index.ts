@@ -98,7 +98,7 @@ async function loadHTML(url: string): Promise<void> {
  */
 
 function scrollVisibility(target: string) {
-    const observers = new IntersectionObserver((entries, observer) => {
+    const observers = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         // console.log(entry)
         if(entry.isIntersecting) {
