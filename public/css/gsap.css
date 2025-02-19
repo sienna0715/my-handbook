@@ -9,34 +9,107 @@
  * 02) SECTION
  */
 
-
 /* ************************************** *
  * OVERRIDE
  * ************************************** */
- body.gsap-stagger-page {  background: var(--color-background); color: #fffce1; accent-color: #0ae448; } 
- 
- 
+body.gsap-stagger-page {  
+    background: var(--color-background); 
+    color: #fffce1; 
+    accent-color: #0ae448; 
+} 
+
  /* ************************************** *
  * SECTION
  * ************************************** */
-.staggers__container { display: flex; justify-content: center; padding-bottom: 100rem; }
-
-.staggers__description { max-width: 600rem; display: flex; flex-direction: column; justify-content: center; line-height: 1.45; }
-.code-block { padding: 12rem; margin-top: 12rem; border-radius: 10rem; background-color: var(--color-gray1); border: 1px solid var(--color-gray2); }
-code { font-family: 'SF Mono', sans-serif; }
- 
-.staggers__animation { max-width: 1000rem; display: flex; flex-direction: column; margin-top: 35rem; padding:0 16rem 16rem 16rem; }
-.controls__container { margin-top: 30rem; display:flex; flex-wrap: wrap; justify-content: center; align-items: start; text-align: center; }
-.control__wrapper { display: flex; justify-content: center; align-items: flex-start; color: white; margin-bottom: 10rem; }
-.control-label { margin-top: 10rem; }
-.control-vertical { display: flex; flex-direction: column; align-content: flex-start; justify-content: flex-start; text-align: left; margin-right: 18rem; padding: 6rem 8rem; border-radius: 10rem; color: #bbb; }
-
-#box__container { display: flex; align-items: center; justify-content: center; overflow: visible; }
-.box { display: inline-block; position: relative; border-radius: 5rem; background-color: #0ae448 !important; cursor: pointer; }
-.box::before { content:""; display:block; padding-top:100%; }
-.box:hover::before { background-color: #22c1c3; border-radius: 5rem; }
-
-
-@media only screen and (max-width: 640rem) {
+.staggers__container { 
+    display: flex; 
+    justify-content: center; 
+    padding-bottom: 100rem; 
     
+    & .staggers__description { 
+        max-width: 600rem; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        line-height: 1.45; 
+        
+        & .code-block { 
+            padding: 12rem; 
+            margin-top: 12rem; 
+            border-radius: 10rem; 
+            background-color: var(--color-gray1); 
+            border: 1px solid var(--color-gray2); 
+            
+            & code { 
+                font-family: 'SF Mono', sans-serif; 
+            }
+        }
+    }
+    
+    & .staggers__animation { 
+        max-width: 1000rem; 
+        display: flex; 
+        flex-direction: column; 
+        margin-top: 35rem; 
+        padding:0 16rem 16rem 16rem; 
+
+        & #boxContainer { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: visible; 
+            
+            & .box { 
+                display: inline-block; 
+                position: relative; 
+                border-radius: 5rem; 
+                background-color: #0ae448 !important; 
+                cursor: pointer; 
+                
+                &::before { 
+                    content: ""; 
+                    display: block; 
+                    padding-top: 100%; 
+                }
+                
+                &:hover::before { 
+                    background-color: #22c1c3; 
+                    border-radius: 5rem; 
+                }
+            }
+        }
+        
+        & .controls__container { 
+            margin-top: 30rem; 
+            display:flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: start; 
+            text-align: center; 
+            
+            & .control__wrapper { 
+                display: flex; 
+                justify-content: center; 
+                align-items: flex-start; 
+                color: white; 
+                margin-bottom: 10rem; 
+                
+                & .control-label { 
+                    margin-top: 10rem; 
+                }
+                
+                & .control-vertical { 
+                    display: flex; 
+                    flex-direction: column;
+                    align-content: flex-start; 
+                    justify-content: flex-start; 
+                    text-align: left; 
+                    margin-right: 18rem; 
+                    padding: 6rem 8rem; 
+                    border-radius: 10rem; 
+                    color: #bbb; 
+                }
+            }
+        }
+    }
 }

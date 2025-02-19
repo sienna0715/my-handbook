@@ -54,7 +54,7 @@ checkedOptions.forEach((el) => {
 });
 
 // 2️⃣ box 호출
-buildGrid({ grid: grid, width: 700, gutter: 15, className: 'box', parent: '#box__container', onCellClick: onCellClick});
+buildGrid({ grid: grid, width: 700, gutter: 15, className: 'box', parent: '#boxContainer', onCellClick: onCellClick});
 
 // 5️⃣ animateBoxes 호출
 animateBoxes();

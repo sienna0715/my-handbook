@@ -19,252 +19,262 @@
     <header id="header"></header>
 
     <main>
-        <div class="main__inner">
-
-            <div class="main__title">
+        <div class="feature__wrapper">
+            <div class="feature__title">
                 <h1 class="title-text--02">Component</h1>
                 <p class="en-text--09 hightlight-color--gray">Look at the various UI</p>
-            </div><!-- .main__title -->
+            </div><!-- .feature__title -->
 
-            <div class="display__full">
-                <div class="display__full-interior">
-                    <div class="display__full-layout">
+            <div class="feature__container">
+                <div class="feature__wide">
+                    <div class="feature__inner">
 
-                        <div class="menu__container">
-                            <div class="filter">
-                                <div class="filter__head">
+                        <div class="feature__filtering">
+                            <div class="filter-search">
+                                <div class="filter-search__head">
                                     <h3 class="en-text--08">Filters</h3>
-                                    <button class="filter__clear-btn">
+
+                                    <button class="filter-search__clear-btn">
                                         <span class="hightlight-color--gray">Clear</span>
-                                    </button><!-- .filter__clear-btn -->
-                                </div><!-- .filter__head -->
-                                <form  role="search" action="" class="filter__search">
-                                    <label class="filter__search-label">
-                                        <input id="filter__search-field" placeholder="Search" />
-                                    </label><!-- .filter__search-label -->
-                                    <button type="submit" class="filter__search-btn">
+                                    </button><!-- .filter-search__clear-btn -->
+                                </div><!-- .filter-search__head -->
+
+                                <form  role="search" action="" class="filter-search__form">
+                                    <label class="filter-search__label">
+                                        <input id="filter-search__field" placeholder="Search" />
+                                    </label><!-- .filter-search__label -->
+
+                                    <button type="submit" class="filter-search__btn">
                                         <span>
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                         </span>
-                                    </button><!-- .filter__search-btn-->
-                                </form><!-- .filter__search -->
-                                <div class="filter__result"></div><!-- .filter__result -->
-                            </div><!-- .filter -->
+                                    </button><!-- .filter-search__btn -->
+                                </form><!-- .filter-search__form -->
 
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <div class="menu__head">
+                                <div class="filter-search__result"></div>
+                            </div><!-- .filter-search -->
+
+                            <ul class="filter-checkbox">
+                                <li class="filter-checkbox__wrapper">
+                                    <div class="filter-checkbox__head">
                                         <h5 class="en-text--10">Basic UI</h5>
                                         <span class="dropdown__btn"><i class="fa-solid fa-angle-up"></i></span>
-                                    </div><!-- .menu__head -->
+                                    </div><!-- .filter-checkbox__head -->
 
-                                    <ul class="sub-menu__list">
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                    <ul class="filter-checkbox__list">
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="tab" />
                                                 <span class="checkbox">Tab</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                        </li><!-- .filter-checkbox__item -->
+
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="accordion" />
                                                 <span class="checkbox">Accordion</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                        </li><!-- .filter-checkbox__item -->
+
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="form" />
                                                 <span class="checkbox">Form</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                        </li><!-- .filter-checkbox__item -->
+
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="carousel" />
                                                 <span class="checkbox">Carousel</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                        </li><!-- .filter-checkbox__item -->
+                                        
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="toggle" />
                                                 <span class="checkbox">Toggle</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                    </ul><!-- .sub-menu__list -->
-                                </li><!-- .menu__item -->
+                                        </li><!-- .filter-checkbox__item -->
+                                    </ul><!-- .filter-checkbox__list -->
+                                </li><!-- .filter-checkbox__wrapper -->
 
-                                <li class="menu__item">
-                                    <div class="menu__head">
+                                <li class="filter-checkbox__wrapper">
+                                    <div class="filter-checkbox__head">
                                         <h5 class="en-text--10">Scroll-related UI</h5>
                                         <span class="dropdown__btn"><i class="fa-solid fa-angle-up"></i></span>
-                                    </div><!-- .menu__head -->
+                                    </div><!-- .filter-checkbox__head -->
 
-                                    <ul class="sub-menu__list">
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                    <ul class="filter-checkbox__list">
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="progress bar" />
                                                 <span class="checkbox">Progress Bar</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                    </ul><!-- .sub-menu__list -->
-                                </li><!-- .menu__item -->
+                                        </li><!-- .filter-checkbox__item -->
+                                    </ul><!-- .filter-checkbox__list -->
+                                </li><!-- .filter-checkbox__wrapper -->
 
-                                <li class="menu__item">
-                                    <div class="menu__head">
+                                <li class="filter-checkbox__wrapper">
+                                    <div class="filter-checkbox__head">
                                         <h5 class="en-text--10">Additional UI</h5>
                                         <span class="dropdown__btn"><i class="fa-solid fa-angle-up"></i></span>
-                                    </div><!-- .menu__head -->
+                                    </div><!-- .filter-checkbox__head -->
 
-                                    <ul class="sub-menu__list">
-                                        <li class="sub-menu__item">
-                                            <label class="checkbox__wrapper">
+                                    <ul class="filter-checkbox__list">
+                                        <li class="filter-checkbox__item">
+                                            <label class="filter-checkbox__label">
                                                 <input class="sr-only" type="checkbox" role="checkbox" value="loader" />
                                                 <span class="checkbox">Loader</span>
                                             </label>
-                                        </li><!-- .sub-menu__item -->
-                                    </ul><!-- .sub-menu__list -->
-                                </li><!-- .menu__item -->
-                            </ul><!-- .menu__list -->
-                        </div><!-- .menu__container -->
+                                        </li><!-- .filter-checkbox__item -->
+                                    </ul><!-- .filter-checkbox__list -->
+                                </li><!-- .filter-checkbox__wrapper -->
+                            </ul><!-- .filter-checkbox -->
+                        </div><!-- .feature__filtering -->
 
-                        <div class="content__container">
+                        <div class="posts__container">
                             <span class="total__num"></span>
-                            <ul class="content__list">
+                            
+                            <ul class="posts__list">
                                 <div class="no-matching">
                                     <span>No matching...</span>
-                                </div><!-- .no-matching__post -->
-                                <li class="content__post" data-category="tab">
-                                    <div class="content__item">
-                                        <div class="badges">
+                                </div><!-- .no-matching -->
+
+                                <li class="posts__item" data-category="tab">
+                                    <div class="posts__content">
+                                        <div class="posts__badges">
                                             <span class="badge badge-html en-text--12">HTML</span>
                                             <span class="badge badge-css en-text--12">CSS</span>
                                             <span class="badge badge-js en-text--12">JavaScript</span>
                                         </div>
                                         <h3><span class="title-text--04">UI Component: TAB</span></h3>
-                                        <p class="description">
+                                        <p class="posts__description">
                                             General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
                                         </p>
-                                    </div><!-- .content__item -->
+                                    </div><!-- .posts__content -->
 
                                     <div class="modal__container">
-                                        <div class="modal__content">
+                                        <div class="modal">
                                             <div class="close__btn"></div>
                                             <div class="modal__layout tab"></div>
-                                        </div><!-- .modal__content -->
+                                        </div><!-- .modal -->
                                     </div><!-- . modal__container -->
-                                </li><!-- .content__post -->
+                                </li><!-- .posts__item -->
                                 
-                                <li class="content__post" data-category="accordion">
-                                    <div class="content__item">
-                                        <div class="badges">
+                                <li class="posts__item" data-category="accordion">
+                                    <div class="posts__content">
+                                        <div class="posts__badges">
                                             <span class="badge badge-html en-text--12">HTML</span>
                                             <span class="badge badge-css en-text--12">CSS</span>
                                             <span class="badge badge-js en-text--12">JavaScript</span>
                                         </div>
                                         <h3><span class="title-text--04">UI Component: ACCORDION</span></h3>
-                                        <p class="description">
+                                        <p class="posts__description">
                                             General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
                                         </p>
-                                    </div><!-- .content__item -->
+                                    </div><!-- .posts__content -->
 
                                     <div class="modal__container">
-                                        <div class="modal__content">
+                                        <div class="modal">
                                             <div class="close__btn"></div>
                                             <div class="modal__layout accordion"></div>
-                                        </div><!-- .modal__content -->
+                                        </div><!-- .modal -->
                                     </div><!-- . modal__container -->
-                                </li><!-- .content__post -->
+                                </li><!-- .posts__item -->
                                 
-                                <li class="content__post" data-category="form">
-                                    <div class="content__item">
-                                        <div class="badges">
+                                <li class="posts__item" data-category="form">
+                                    <div class="posts__content">
+                                        <div class="posts__badges">
                                             <span class="badge badge-html en-text--12">HTML</span>
                                             <span class="badge badge-css en-text--12">CSS</span>
                                             <span class="badge badge-js en-text--12">JavaScript</span>
                                         </div>
                                         <h3><span class="title-text--04">UI Component: FORM</span></h3>
-                                        <p class="description">
+                                        <p class="posts__description">
                                             General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
                                         </p>
-                                    </div><!-- .content__item -->
+                                    </div><!-- .posts__content -->
 
                                     <div class="modal__container">
-                                        <div class="modal__content">
+                                        <div class="modal">
                                             <div class="close__btn"></div>
                                             <div class="modal__layout form"></div>
-                                        </div><!-- .modal__content -->
+                                        </div><!-- .modal -->
                                     </div><!-- . modal__container -->
-                                </li><!-- .content__post -->
+                                </li><!-- .posts__item -->
                                 
-                                <li class="content__post" data-category="carousel">
-                                    <div class="content__item">
-                                        <div class="badges">
+                                <li class="posts__item" data-category="carousel">
+                                    <div class="posts__content">
+                                        <div class="posts__badges">
                                             <span class="badge badge-html en-text--12">HTML</span>
                                             <span class="badge badge-css en-text--12">CSS</span>
                                             <span class="badge badge-js en-text--12">JavaScript</span>
                                         </div>
                                         <h3><span class="title-text--04">UI Component: CAROUSEL</span></h3>
-                                        <p class="description">
+                                        <p class="posts__description">
                                             General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
                                         </p>
-                                    </div><!-- .content__item -->
+                                    </div><!-- .posts__content -->
 
                                     <div class="modal__container">
-                                        <div class="modal__content">
+                                        <div class="modal">
                                             <div class="close__btn"></div>
                                             <div class="modal__layout carousel"></div>
-                                        </div><!-- .modal__content -->
+                                        </div><!-- .modal -->
                                     </div><!-- . modal__container -->
-                                </li><!-- .content__post -->
+                                </li><!-- .posts__item -->
                                 
-                                <li class="content__post" data-category="toggle">
-                                    <div class="content__item">
-                                        <div class="badges">
+                                <li class="posts__item" data-category="toggle">
+                                    <div class="posts__content">
+                                        <div class="posts__badges">
                                             <span class="badge badge-html en-text--12">HTML</span>
                                             <span class="badge badge-css en-text--12">CSS</span>
                                             <span class="badge badge-js en-text--12">JavaScript</span>
                                         </div>
+
                                         <h3><span class="title-text--04">UI Component: TOGGLE</span></h3>
-                                        <p class="description">
+                                        <p class="posts__description">
                                             General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
                                         </p>
-                                    </div><!-- .content__item -->
+                                    </div><!-- .posts__content -->
 
                                     <div class="modal__container">
-                                        <div class="modal__content">
+                                        <div class="modal">
                                             <div class="close__btn"></div>
                                             <div class="modal__layout toggle"></div>
-                                        </div><!-- .modal__content -->
+                                        </div><!-- .modal -->
                                     </div><!-- . modal__container -->
-                                </li><!-- .content__post -->
+                                </li><!-- .posts__item -->
 
-                                <li class="content__post" data-category="loader">
-                                    <div class="content__item">
-                                        <div class="badges">
+                                <li class="posts__item" data-category="loader">
+                                    <div class="posts__content">
+                                        <div class="posts__badges">
                                             <span class="badge badge-html en-text--12">HTML</span>
                                             <span class="badge badge-css en-text--12">CSS</span>
                                         </div>
                                         <h3><span class="title-text--04">UI Component: LOADER</span></h3>
-                                        <p class="description">
+                                        <p class="posts__description">
                                             General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
                                         </p>
-                                    </div><!-- .content__item -->
+                                    </div><!-- .posts__content -->
 
                                     <div class="modal__container">
-                                        <div class="modal__content">
+                                        <div class="modal">
                                             <div class="close__btn"></div>
                                             <div class="modal__layout loader"></div>
-                                        </div><!-- .modal__content -->
+                                        </div><!-- .modal -->
                                     </div><!-- . modal__container -->
-                                </li><!-- .content__post -->
+                                </li><!-- .posts__item -->
                                 
                                 <div class="pagination single-btn__wrapper"></div>
-                            </ul><!-- .content__list -->
-                        </div><!-- .content__contaier -->
+                            </ul><!-- .posts__list -->
+                        </div><!-- .posts__container -->
                         
-                    </div><!-- .display__full-layout -->
-                </div><!-- .display__full-interior -->
-            </div><!-- .display__full -->
-        </div><!-- .main__inner -->
+                    </div><!-- .feature__inner -->
+                </div><!-- .feature__wide -->
+            </div><!-- .feature__container -->
+        </div><!-- .feature__wrapper -->
     </main>
 
     <footer id="footer"></footer>

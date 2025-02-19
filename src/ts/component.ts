@@ -10,7 +10,6 @@
  */
 
 
-
 /* **************************************** *
  * Run
  * **************************************** */
@@ -145,15 +144,13 @@ const itemsPerPage = 4; // 한 페이지에 표시할 아이템 수
 let currentPage = 1; // 현재 페이지
 
 function pagination() {
-   
     displayItems(itemsPerPage);
     triggerPagination();
-    
 }
 
 // 1. 데이터를 페이지 단위로 나누기
 function sliceIntoChunks(itemsPerPage: number) {
-    const posts = document.querySelectorAll('.content__post');
+    const posts = document.querySelectorAll('.posts__item');
     const postsArr = Array.from(posts); // NodeList to Array
     const paginatedItems: HTMLElement[][] = [];
 
@@ -244,10 +241,10 @@ function triggerPagination() {
  */
 
 function filterTag() {
-    const form = document.querySelector('.filter__search') as HTMLFormElement;
-    const wrapper = document.querySelector('.filter__result') as HTMLDivElement;
-    const clearBtn = document.querySelector('.filter__clear-btn') as HTMLButtonElement;
-    const target = document.getElementById('filter__search-field') as HTMLInputElement;
+    const form = document.querySelector('.filter-search__form') as HTMLFormElement;
+    const target = document.getElementById('filter-search__field') as HTMLInputElement;
+    const clearBtn = document.querySelector('.filter-search__clear-btn') as HTMLButtonElement;
+    const wrapper = document.querySelector('.filter-search__result') as HTMLDivElement;
     let datas: string[] = JSON.parse(sessionStorage.getItem('tags') || '[]');
 
     if(form) {
@@ -267,8 +264,9 @@ function filterTag() {
         });
     }
     
-   // 새로고침 시에도 데이터 유지
-    window.onload = function() {
+    // 새로고침 시에도 데이터 유지
+    window.onload = function () {
+        console.log('onload');
         datas.forEach(el => {
             createTag(el);
         });
@@ -288,7 +286,7 @@ function filterTag() {
 
     // 태그 제거
     function deleteTag() {
-        const tagBtn = document.querySelectorAll('.filter__tag') as NodeListOf<HTMLButtonElement>;
+        const tagBtn = document.querySelectorAll('.filter-search__tag') as NodeListOf<HTMLButtonElement>;
 
         tagBtn.forEach((el) => {
             el.addEventListener('click', () => {
@@ -304,10 +302,10 @@ function filterTag() {
     function createTag(tag: string) {
         const element = document.createElement('button');
         
-        element.classList.add('filter__tag')
+        element.classList.add('filter-search__tag')
         element.innerHTML = `
             <span>${tag}</span>
-            <i class="filter__remove-icon fa-solid fa-xmark"></i>
+            <i class="filter-search__remove-icon fa-solid fa-xmark"></i>
         `;
         wrapper.appendChild(element);
     }
@@ -345,7 +343,7 @@ function filterTag() {
 function filterCheckbox() {
     let datas: string[] = JSON.parse(sessionStorage.getItem('checked') || '[]');
 
-    document.querySelectorAll('.sub-menu__item input[type="checkbox"]').forEach((el: any) => {
+    document.querySelectorAll('.filter-checkbox__item input[type="checkbox"]').forEach((el: any) => {
 
         // 새로고침해도 checked 상태 유지하기
         if (datas.includes(el.value)) {
@@ -370,8 +368,6 @@ function filterCheckbox() {
     });
 }
 
-
-
 /**
  * Fitering Post
  *
@@ -383,13 +379,13 @@ function filterCheckbox() {
  */
 
 function filterPost() {
-    const posts = document.querySelectorAll('.content__post') as NodeListOf<HTMLDivElement>;
+    const posts = document.querySelectorAll('.posts__item') as NodeListOf<HTMLDivElement>;
     const loadedPosts = Array.from(posts).filter(post => post.dataset.show === "true");
     let getTagData: string[] = JSON.parse(sessionStorage.getItem('tags') || '[]');
     let getCheckedData: string[] = JSON.parse(sessionStorage.getItem('checked') || '[]');
     let filteredPost = 0; // 필터링된 포스트 수
     const totalFilter = [...getTagData, ...getCheckedData];
-     
+
     loadedPosts.forEach((post: any) => {   
 
         if (totalFilter.length > 0 && totalFilter.includes(post.dataset['category'])) {
@@ -406,13 +402,11 @@ function filterPost() {
     });
 
     if (totalFilter.length > 0 && filteredPost === 0) {
-        document.querySelector('.content__list')?.classList.add('no-matching__post');
+        document.querySelector('.posts__list')?.classList.add('no-matching__post');
     } else  {
-        document.querySelector('.content__list')?.classList.remove('no-matching__post');
+        document.querySelector('.posts__list')?.classList.remove('no-matching__post');
     }
 }
-
-
 
 /**
  * Modal
@@ -422,16 +416,17 @@ function filterPost() {
  * @example 
  * 
  */
+
 function modal() {
     const body = document.querySelector('body');
-    const target = document.querySelectorAll('.content__post');
+    const target = document.querySelectorAll('.posts__item');
     
     if (body!.classList.contains('component-page')) {
 
         target.forEach((el) => {
-            const item = el.querySelector('.content__item') as HTMLDivElement;
+            const item = el.querySelector('.posts__content') as HTMLDivElement;
             const modal = el.querySelector('.modal__container') as HTMLDivElement;
-            // const content = el.querySelector('.modal__content') as HTMLDivElement;
+            // const content = el.querySelector('.modal') as HTMLDivElement;
             const closeBtn = el.querySelector('.close__btn') as HTMLDivElement;
             
             // OPEN
@@ -460,8 +455,6 @@ function modal() {
     }
 }
 
-
-
 /**
  * Dropdown
  *
@@ -478,8 +471,8 @@ function dropDown() {
         let isOpen: boolean = true;
 
         el.addEventListener('click', () => {
-            const parent = el.closest('.menu__item') as HTMLLIElement;
-            const target = parent!.querySelector('.sub-menu__list') as HTMLUListElement;
+            const parent = el.closest('.filter-checkbox__wrapper') as HTMLLIElement;
+            const target = parent!.querySelector('.filter-checkbox__list') as HTMLUListElement;
 
             isOpen = !isOpen;
     
@@ -505,6 +498,7 @@ function dropDown() {
  * @example 
  * 
  */
+
 function tab() {
     const tabs: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.tab__menu button');
     const tabContents: NodeListOf<HTMLDivElement> = document.querySelectorAll('.tab__content');
@@ -520,7 +514,7 @@ function tab() {
             // Hide Content
             tabContents.forEach(content => {
                 content.style.display = 'none';
-              });
+            });
 
             // Active clicked current tab
             tab.classList.add('tab--active');
@@ -574,11 +568,6 @@ function accordion() {
         const toggleIcon = toggleBtn.querySelector('.icon') as HTMLElement;
         const content = item.querySelector('.accordion__content') as HTMLDivElement;
         
-        // // first item active
-        // if (index === 0 && item.classList.contains('accordion--active')) {
-        //     content.style.maxHeight = content.scrollHeight + 'rem';
-        // }
-       
         head.addEventListener('click', () => {
             item.classList.toggle('accordion--active');
 
@@ -605,6 +594,7 @@ function accordion() {
  * @example 
  * 
  */
+
 function form() {
     const form = document.querySelector('.form__container') as HTMLFormElement;
     const submitBtn = document.querySelector('.form__action') as HTMLInputElement;
@@ -767,7 +757,7 @@ function toggle() {
 
 function totalNum() {
     const total = document.querySelector('.total__num') as HTMLSpanElement;
-    const posts = document.querySelectorAll('.content__post') as NodeListOf<HTMLLIElement>;
+    const posts = document.querySelectorAll('.posts__item') as NodeListOf<HTMLLIElement>;
 
     total.textContent = `${posts.length} posts`;
 }
