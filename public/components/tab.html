@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab__container">
+        <div class="tab__menu">
+            <div class="tab__underline"></div>
+            <button role="tab" class="tab--active" data-tab="tab1">
+                <span class="tab__text-label">TAB ONE</span>
+            </button>
+            <button role="tab" data-tab="tab2">
+                <span class="tab__text-label">TAB TWO</span>
+            </button>
+            <button role="tab" data-tab="tab3">
+                <span class="tab__text-label">TAB THREE</span>
+            </button>
+        </div><!-- .tab__menu -->
+
+        <div class="tab__panel">
+            <div class="tab__content" id="tab1">Content for Tab 1</div>
+            <div class="tab__content" id="tab2" style="display: none;">Content for Tab 2</div>
+            <div class="tab__content" id="tab3" style="display: none;">Content for Tab 3</div>
+        </div><!-- .tab__panel -->
+    </div><!-- .tab__container -->
+</body>
+</html>

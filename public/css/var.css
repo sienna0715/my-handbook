@@ -1,0 +1,19 @@
+:root {
+    /* COLOR */
+    --color-white: #FFF;
+    --color-background: #010409;
+    --color-primary: #C8F9D4;
+    --color-mute: rgba(191,220,255,.8);
+    --color-purple: #8957e5;
+    --color-darkpurple: #6200ee;
+    --color-gray1: #0D1117;
+    --color-gray2: #21262D;
+    --color-gray3: #484f58;
+    --color-gray4: #6e7681;
+    --color-gray5: #8b949e;
+    --color-gray6: #c9d1d9;
+
+    /* FONT */
+    --font-primary: 'Mona Sans', sans-serif;
+    --font-secondary: 'SFMono', sans-serif; 
+}

@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/*
+ * File       : global.css
+ * Author     : SION
+ *
+ * SUMMARY:
+ * 01) RESET
+ * 02) TYPOGRAPHY
+ */
+
+
+/* ************************************** *
+ * RESET
+ * ************************************** */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, time, figure, article, nav, header, footer, hgroup, video, audio, aside, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ol, ul { list-style: none; }
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+figure, article, header, footer, nav, hgroup, video, audio, aside, main { display: block; }
+
+html { font-size: 6.25%; scroll-behavior: smooth; }
+html.safari.desktop { font-size: .05254860746190226vw; }
+
+body { overflow-x: hidden; font-family: 'Mona Sans', sans-serif; font-size: 16rem; word-break: keep-all; }
+a { color: #000; text-decoration: none; }
+button { font-family: 'Mona Sans', sans-serif; font-size: 16rem; cursor: pointer; }
+
+
+/* **************************************** *
+ * A11Y
+ * **************************************** */
+.sr-only { position: absolute; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(0px 0px 99.9% 99.9%); clip-path: inset(0px 0px 99.9% 99.9%); overflow: hidden; height: 1px; width: 1px; padding: 0; border: 0; }
+
+#skip a { width: 1rem; height: 1rem; position: absolute; left: -10000rem; top: auto; overflow: hidden; }
+#skip a:focus { display: block; width: 100%; height: 50rem; padding: 0 24rem; position: fixed; top: 0; left: 0; font-size: var(--font-size-ko-08); line-height: 50rem; text-align: center; font-weight: bold; color: var(--color-white); background: var(--color-black); z-index: 999; }
+
+:focus:not(:focus-visible) :is( select, input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], textarea, input[type=submit], input[type=button], button, a ) { outline: none; }
+
+
+/* **************************************** *
+ * TYPOGRAPHY
+ * **************************************** */
+.ko-text--01 { font-size: 80rem; line-height: 1.25; font-weight: 600; letter-spacing: 0; }
+.ko-text--02 { font-size: 72rem; line-height: 1.19; font-weight: 600; letter-spacing: 0; }
+.ko-text--03 { font-size: 62rem; line-height: 1.38; font-weight: 600; letter-spacing: 0; }
+.ko-text--04 { font-size: 48rem; line-height: 1.41; font-weight: 600; letter-spacing: 0; }
+.ko-text--05 { font-size: 32rem; line-height: 1.62; font-weight: 600; letter-spacing: 0; }
+.ko-text--06 { font-size: 24rem; line-height: 1.66; font-weight: 600; letter-spacing: 0; }
+.ko-text--07 { font-size: 18rem; line-height: 1.77; font-weight: 600; letter-spacing: 0; }
+.ko-text--08 { font-size: 17rem; line-height: 1.76; font-weight: 600; letter-spacing: 0; }
+.ko-text--09 { font-size: 16rem; line-height: 1.75; font-weight: 600; letter-spacing: 0; }
+.ko-text--10 { font-size: 15rem; line-height: 1.6; font-weight: 600; letter-spacing: 0; }
+.ko-text--11 { font-size: 14rem; line-height: 1.42; font-weight: 600; letter-spacing: 0; }
+
+.en-text--01 { font-size: 200rem; line-height: 1.05; font-weight: 400; letter-spacing: 0; }
+.en-text--02 { font-size: 100rem; line-height: 1.08; font-weight: 400; letter-spacing: 0; }
+.en-text--03 { font-size: 80rem; line-height: 1.2; font-weight: 400; letter-spacing: 0; }
+.en-text--04 { font-size: 60rem; line-height: 1.2; font-weight: 400; letter-spacing: 0; }
+.en-text--05 { font-size: 46rem; line-height: 1; font-weight: 400; letter-spacing: 0; }
+.en-text--06 { font-size: 30rem; line-height: 1.2; font-weight: 400; letter-spacing: 0; }
+.en-text--07 { font-size: 22rem; line-height: 1.2; font-weight: 400; letter-spacing: 0; }
+.en-text--08 { font-size: 20rem; line-height: 1.2; font-weight: 400; letter-spacing: 0; }
+.en-text--09 { font-size: 18rem; line-height: 1.33; font-weight: 400; letter-spacing: 0; }
+.en-text--10 { font-size: 17rem; line-height: 1.29; font-weight: 400; letter-spacing: 0; }
+.en-text--11 { font-size: 14rem; line-height: 1.28; font-weight: 400; letter-spacing: 0; }
+.en-text--12 { font-size: 12rem; line-height: 1.27; font-weight: 400; letter-spacing: 0; }
+
+/* Bold */
+.title-text--01 { font-size: 100rem; line-height: 1.08; font-weight: 900; letter-spacing: 0; }
+.title-text--02 { font-size: 60rem; line-height: 1.2; font-weight: 900; letter-spacing: 0; }
+.title-text--03 { font-size: 32rem; line-height: 1.2; font-weight: 900; letter-spacing: 0; }
+.title-text--04 { font-size: 24rem; line-height: 1.2; font-weight: 900; letter-spacing: 0; }
+
+/* Custom */
+.highlight-color--mute { color: var(--color-mute); }
+.hightlight-color--gray { color: #8b949e; }
+.highlight-color--purple { background: linear-gradient(to bottom right, rgba(101,68,247,1) 0%, rgba(234,170,252,1) 100%); background-clip: text; -webkit-text-fill-color: transparent; }
+/* .highlight-color--purple:hover { background: linear-gradient(to bottom right, rgba(101,68,247,1) 0%, rgba(234,170,252,1) 100%); color: #fff; -webkit-text-fill-color: #fff; } */
+
+.hightlight-font--secondary { font-family: 'SF Mono', sans-serif; }
+
+
+
+/* ************************************** *
+ * UI
+ * ************************************** */
+/* BUTTON */
+.primary__btn { padding: 13rem 26rem; border: 1px solid #1f2328; border-radius: 10rem; cursor: pointer; transition: background-color .3s; }
+.primary__btn--fill { background-color: #1f2328; color: #fff; }
+.primary__btn--fill:hover { background-color: #32383f;}
+.primary__btn--empty { background-color: transparent; }
+
+.primary__btn span { font-family: 'Mona Sans', sans-serif; font-weight: 700; }
+
+.secondary__btn { padding: 18rem 28rem; border: 1px solid #1f2328; border-radius: 30rem; cursor: pointer; transition: background-color .3s, color .3s, font-weight .3s; }
+.secondary__btn--fill { background-color: #fff; color: #020448; }
+.secondary__btn--fill:hover { background-color: #1f2328; color: #fff; }
+.secondary__btn--empty { background-color: transparent; }
+
+.secondary__btn span { font-family: 'Mona Sans', sans-serif; font-weight: 900; }
+
+.close__btn { width:50px; height: 50px; position: absolute; top: 10rem; right: 5rem; cursor: pointer; }
+.close__btn::before, 
+.close__btn::after { content:''; display: inline-block; width: 2px; height: 40px; left: 15px; background-color: #000; }
+.close__btn::before { transform: rotate(45deg); }
+.close__btn::after { transform: rotate(-45deg); }
+
+/* MASONRY */
+.masonry__wrapper { margin-top: 100rem; }
+.masonry__list { display: flex; flex-direction: row; gap: 20rem; flex-wrap: wrap; }
+.masonry__item { width: 300rem; height: 400rem; background-color: #fff; border-radius: 10rem; }
+
+
+
+/* ************************************** *
+ * Layout
+ * ************************************** */
+main { width: 100%; margin: 0 auto; }
+.main__inner { padding-top: 100rem; }
+
+.main__title { display: flex; flex-direction: column; align-items: center; gap: 24rem; padding: 96rem 0; }
+
+.display__full { width: 100%; padding: 32rem 0;  }
+.display__full-interior { max-width: 1280rem; margin: 0 auto; }
+.display__full-layout { display: flex; gap: 48rem; margin: 0 48rem; }
+
+.single-btn__wrapper { display: flex; justify-content: center; }
+
+
+
+/* ************************************** *
+ * Intersection Observer
+ * ************************************** */
+.fade-in { animation: fadeIn 1.5s ease-out .3s 1 forwards; }
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+ /* ************************************** *
+ * scroll
+ * ************************************** */
+body::-webkit-scrollbar { width: 10rem; }
+body::-webkit-scrollbar-thumb { border-radius: 10rem; background: var(--color-gray3); }
+body::-webkit-scrollbar-track { background: var(--color-gray2); }

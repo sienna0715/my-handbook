@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*
+ * File       : common.css
+ * Author     : SION
+ *
+ * SUMMARY:
+ * 1) HEADEER
+ * 2) FOOTER
+ */
+
+
+ /* ************************************** *
+ * HEADER
+ * ************************************** */
+#header { width: 100%; position: fixed; z-index: 999; }
+.header__inner { 
+  max-width: calc(1280rem - 48rem * 2 + 24rem);; 
+  width: 100%;
+  height: 64rem; 
+  padding: 8rem 8rem 8rem 26rem; 
+  margin: 16rem auto 0 auto;
+  background: radial-gradient(67.87% 1366.67% at 50% 0, hsla(0, 0%, 100%, .95) 0, hsla(0, 0%, 100%, .85) 85.19%); 
+  -webkit-backdrop-filter: blur(32.5px); 
+  backdrop-filter: blur(32.5px); 
+  border-radius: 16rem;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#logo { width: 100%; height: 64rem; padding: 16rem 0; box-sizing: border-box; max-width: 340rem; display: flex; align-items: center;}
+#logo a { display: flex; align-items: center; gap: 16rem; }
+#logo .icon { font-size: 26rem; }
+
+nav { flex: 1 1 0; }
+nav ul { display: flex; justify-content: center; gap: 40rem; margin-right: 100rem; }
+nav ul li { position: relative; }
+nav ul li a::after { content: ""; width: 0; height: 2rem; position: absolute; bottom: -6rem; left: 50%; transform: translateX(-50%); background-color: var(--color-gray4); transition: .3s ease; }
+nav ul li a:hover::after { width: 65%; }
+
+
+
+/* ************************************** *
+* FOOTER
+* ************************************** */
+#footer { background: linear-gradient(to bottom, transparent 7.22%, #020448 145.69%); color: #fff; }
+.home #footer { background: #020448; }
+
+.footer__container { display: flex; flex-direction: column; }
+.footer__wrapper { width: 100%; max-width: 1280rem; padding: 48rem; margin: 0 auto; display: flex; justify-content: center; flex-direction: row; justify-content: space-between; align-items: center; box-sizing: border-box; }
+.flogo { display: flex; flex-direction: column; }
+.flogo span { line-height: 1; }
+.sns__list { display: flex; gap: 15rem; }
+.sns__list .icon { font-size: 26rem; }
+
+hr { width: 100%; margin: 0; border: 1px solid rgba(191,220,255,.25); }
+
+#footer.footer__minimize { width: 100%; height: 5vh; display: flex; justify-content: center; background: #24292D; }
+#footer.footer__minimize hr { display: none; }
+.footer__minimize .footer__container { min-width: 1280rem; flex-direction: row-reverse; justify-content: space-between; }
+.footer__minimize .footer__wrapper { width: auto; padding: 0; margin: 0; }
+.footer__minimize .flogo { display: none; }
+.footer__minimize .fmenu { display: none; }
+.footer__minimize .sns__list .icon { font-size: 14rem; }

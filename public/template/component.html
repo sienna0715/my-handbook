@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SION'HANDBOOK | Component</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/var.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/component.css">
+
+     <!-- PLUGIN -->
+     <script src="https://kit.fontawesome.com/f4fc74fe2d.js" crossorigin="anonymous"></script>
+</head>
+<body class="component-page">
+    <header id="header"></header>
+
+    <main>
+        <div class="main__inner">
+
+            <div class="main__title">
+                <h1 class="title-text--02">Component</h1>
+                <p class="en-text--09 hightlight-color--gray">Look at the various UI</p>
+            </div><!-- .main__title -->
+
+            <div class="display__full">
+                <div class="display__full-interior">
+                    <div class="display__full-layout">
+
+                        <div class="menu__container">
+                            <div class="filter">
+                                <div class="filter__head">
+                                    <h3 class="en-text--08">Filters</h3>
+                                    <button class="filter__clear-btn">
+                                        <span class="hightlight-color--gray">Clear</span>
+                                    </button><!-- .filter__clear-btn -->
+                                </div><!-- .filter__head -->
+                                <form  role="search" action="" class="filter__search">
+                                    <label class="filter__search-label">
+                                        <input id="filter__search-field" placeholder="Search" />
+                                    </label><!-- .filter__search-label -->
+                                    <button type="submit" class="filter__search-btn">
+                                        <span>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </span>
+                                    </button><!-- .filter__search-btn-->
+                                </form><!-- .filter__search -->
+                                <div class="filter__result"></div><!-- .filter__result -->
+                            </div><!-- .filter -->
+
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <div class="menu__head">
+                                        <h5 class="en-text--10">Basic UI</h5>
+                                        <span class="dropdown__btn"><i class="fa-solid fa-angle-up"></i></span>
+                                    </div><!-- .menu__head -->
+
+                                    <ul class="sub-menu__list">
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="tab" />
+                                                <span class="checkbox">Tab</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="accordion" />
+                                                <span class="checkbox">Accordion</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="form" />
+                                                <span class="checkbox">Form</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="carousel" />
+                                                <span class="checkbox">Carousel</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="toggle" />
+                                                <span class="checkbox">Toggle</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                    </ul><!-- .sub-menu__list -->
+                                </li><!-- .menu__item -->
+
+                                <li class="menu__item">
+                                    <div class="menu__head">
+                                        <h5 class="en-text--10">Scroll-related UI</h5>
+                                        <span class="dropdown__btn"><i class="fa-solid fa-angle-up"></i></span>
+                                    </div><!-- .menu__head -->
+
+                                    <ul class="sub-menu__list">
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="progress bar" />
+                                                <span class="checkbox">Progress Bar</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                    </ul><!-- .sub-menu__list -->
+                                </li><!-- .menu__item -->
+
+                                <li class="menu__item">
+                                    <div class="menu__head">
+                                        <h5 class="en-text--10">Additional UI</h5>
+                                        <span class="dropdown__btn"><i class="fa-solid fa-angle-up"></i></span>
+                                    </div><!-- .menu__head -->
+
+                                    <ul class="sub-menu__list">
+                                        <li class="sub-menu__item">
+                                            <label class="checkbox__wrapper">
+                                                <input class="sr-only" type="checkbox" role="checkbox" value="loader" />
+                                                <span class="checkbox">Loader</span>
+                                            </label>
+                                        </li><!-- .sub-menu__item -->
+                                    </ul><!-- .sub-menu__list -->
+                                </li><!-- .menu__item -->
+                            </ul><!-- .menu__list -->
+                        </div><!-- .menu__container -->
+
+                        <div class="content__container">
+                            <span class="total__num"></span>
+                            <ul class="content__list">
+                                <div class="no-matching">
+                                    <span>No matching...</span>
+                                </div><!-- .no-matching__post -->
+                                <li class="content__post" data-category="tab">
+                                    <div class="content__item">
+                                        <div class="badges">
+                                            <span class="badge badge-html en-text--12">HTML</span>
+                                            <span class="badge badge-css en-text--12">CSS</span>
+                                            <span class="badge badge-js en-text--12">JavaScript</span>
+                                        </div>
+                                        <h3><span class="title-text--04">UI Component: TAB</span></h3>
+                                        <p class="description">
+                                            General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
+                                        </p>
+                                    </div><!-- .content__item -->
+
+                                    <div class="modal__container">
+                                        <div class="modal__content">
+                                            <div class="close__btn"></div>
+                                            <div class="modal__layout tab"></div>
+                                        </div><!-- .modal__content -->
+                                    </div><!-- . modal__container -->
+                                </li><!-- .content__post -->
+                                
+                                <li class="content__post" data-category="accordion">
+                                    <div class="content__item">
+                                        <div class="badges">
+                                            <span class="badge badge-html en-text--12">HTML</span>
+                                            <span class="badge badge-css en-text--12">CSS</span>
+                                            <span class="badge badge-js en-text--12">JavaScript</span>
+                                        </div>
+                                        <h3><span class="title-text--04">UI Component: ACCORDION</span></h3>
+                                        <p class="description">
+                                            General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
+                                        </p>
+                                    </div><!-- .content__item -->
+
+                                    <div class="modal__container">
+                                        <div class="modal__content">
+                                            <div class="close__btn"></div>
+                                            <div class="modal__layout accordion"></div>
+                                        </div><!-- .modal__content -->
+                                    </div><!-- . modal__container -->
+                                </li><!-- .content__post -->
+                                
+                                <li class="content__post" data-category="form">
+                                    <div class="content__item">
+                                        <div class="badges">
+                                            <span class="badge badge-html en-text--12">HTML</span>
+                                            <span class="badge badge-css en-text--12">CSS</span>
+                                            <span class="badge badge-js en-text--12">JavaScript</span>
+                                        </div>
+                                        <h3><span class="title-text--04">UI Component: FORM</span></h3>
+                                        <p class="description">
+                                            General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
+                                        </p>
+                                    </div><!-- .content__item -->
+
+                                    <div class="modal__container">
+                                        <div class="modal__content">
+                                            <div class="close__btn"></div>
+                                            <div class="modal__layout form"></div>
+                                        </div><!-- .modal__content -->
+                                    </div><!-- . modal__container -->
+                                </li><!-- .content__post -->
+                                
+                                <li class="content__post" data-category="carousel">
+                                    <div class="content__item">
+                                        <div class="badges">
+                                            <span class="badge badge-html en-text--12">HTML</span>
+                                            <span class="badge badge-css en-text--12">CSS</span>
+                                            <span class="badge badge-js en-text--12">JavaScript</span>
+                                        </div>
+                                        <h3><span class="title-text--04">UI Component: CAROUSEL</span></h3>
+                                        <p class="description">
+                                            General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
+                                        </p>
+                                    </div><!-- .content__item -->
+
+                                    <div class="modal__container">
+                                        <div class="modal__content">
+                                            <div class="close__btn"></div>
+                                            <div class="modal__layout carousel"></div>
+                                        </div><!-- .modal__content -->
+                                    </div><!-- . modal__container -->
+                                </li><!-- .content__post -->
+                                
+                                <li class="content__post" data-category="toggle">
+                                    <div class="content__item">
+                                        <div class="badges">
+                                            <span class="badge badge-html en-text--12">HTML</span>
+                                            <span class="badge badge-css en-text--12">CSS</span>
+                                            <span class="badge badge-js en-text--12">JavaScript</span>
+                                        </div>
+                                        <h3><span class="title-text--04">UI Component: TOGGLE</span></h3>
+                                        <p class="description">
+                                            General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
+                                        </p>
+                                    </div><!-- .content__item -->
+
+                                    <div class="modal__container">
+                                        <div class="modal__content">
+                                            <div class="close__btn"></div>
+                                            <div class="modal__layout toggle"></div>
+                                        </div><!-- .modal__content -->
+                                    </div><!-- . modal__container -->
+                                </li><!-- .content__post -->
+
+                                <li class="content__post" data-category="loader">
+                                    <div class="content__item">
+                                        <div class="badges">
+                                            <span class="badge badge-html en-text--12">HTML</span>
+                                            <span class="badge badge-css en-text--12">CSS</span>
+                                        </div>
+                                        <h3><span class="title-text--04">UI Component: LOADER</span></h3>
+                                        <p class="description">
+                                            General Admission ticket holders can watch and enjoy Keynote sessions at the Cowell Theater on days 1 & 2. Please note that seating is first come, first served.
+                                        </p>
+                                    </div><!-- .content__item -->
+
+                                    <div class="modal__container">
+                                        <div class="modal__content">
+                                            <div class="close__btn"></div>
+                                            <div class="modal__layout loader"></div>
+                                        </div><!-- .modal__content -->
+                                    </div><!-- . modal__container -->
+                                </li><!-- .content__post -->
+                                
+                                <div class="pagination single-btn__wrapper"></div>
+                            </ul><!-- .content__list -->
+                        </div><!-- .content__contaier -->
+                        
+                    </div><!-- .display__full-layout -->
+                </div><!-- .display__full-interior -->
+            </div><!-- .display__full -->
+        </div><!-- .main__inner -->
+    </main>
+
+    <footer id="footer"></footer>
+
+    <!-- SCRIPT -->
+    <script type="module" src="../src/ts/index.ts" defer></script>
+    <script type="module" src="../src/ts/component.ts" defer></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SION'HANDBOOK | GSAP</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/var.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/gsap.css">
+
+     <!-- PLUGIN -->
+     <script src="https://kit.fontawesome.com/f4fc74fe2d.js" crossorigin="anonymous"></script>
+</head>
+<body class="gsap-stagger-page">
+    <header id="header"></header>
+
+    <main>
+        <div class="main__inner">
+            <div class="main__title">
+                <h1 class="title-text--02">GSAP STAGGER</h1>
+                <p class="en-text--09 hightlight-color--gray">Look at the various UI</p>
+            </div><!-- .main__title -->
+
+            <div class="staggers__container">
+                <div class="staggers__description">
+                    <p>Play with the options above to see how it affects the animation and the code below. Click any box to have the stagger emanate outward from that specific index number, using the <code class="featured">from:[index]</code> syntax.</p>
+                    
+                    <div class="code-block">
+                        <code>gsap.to(".box", {</code><br>
+                        <code>&nbsp;&nbsp;duration: 1,</code><br>
+                        <code>&nbsp;&nbsp;scale: 0.1,</code><br>
+                        <code>&nbsp;&nbsp;y: 60,</code><br>
+                        <code>&nbsp;&nbsp;ease: "power1.inOut",</code><br>
+                        <code class="featured">&nbsp;&nbsp;stagger: {</code><br>
+                        <code class="featured">
+                            &nbsp;&nbsp;&nbsp;&nbsp;grid: [5, 13],
+                        </code><br>
+                        <code class="featured">
+                            &nbsp;&nbsp;&nbsp;&nbsp;from: <span id="from">"center"</span>,<br>
+                        </code>
+                        <code id="axisCode" class="featured">
+                            &nbsp;&nbsp;&nbsp;&nbsp;axis: <span id="axis">null</span>,<br>
+                        </code>
+                        <code id="easeCode" class="featured">
+                            &nbsp;&nbsp;&nbsp;&nbsp;ease: <span id="ease">Linear.easeNone</span>,<br>
+                        </code>
+                        <code class="featured">&nbsp;&nbsp;&nbsp;&nbsp;amount: 1.5</code><br>
+                        <code class="featured">&nbsp;&nbsp;}</code><br>
+                        <code>});</code>
+                    </div><!-- .code -->
+                </div><!-- .straggers__description -->
+                
+                <div class="staggers__animation">
+                    <div id="box__container"></div><!-- .box__container -->
+
+                    <div class="controls__container">
+                        <div class="control__wrapper">
+                            <div class="control-label">from:</div>
+                            <div class="control-vertical">
+                                <label for="center">
+                                    <input type="radio" id="center" name="from" value="center" checked> 
+                                    <code>"center"</code>
+                                </label>
+                                <label for="end">
+                                    <input type="radio" id="end" name="from" value="end"> 
+                                    <code>"end"</code>
+                                </label>
+                                <label for="edges">
+                                    <input type="radio" id="edges" name="from" value="edges"> 
+                                    <code>"edges"</code>
+                                </label>
+                                <label for="random">
+                                    <input type="radio" id="random" name="from" value="random"> 
+                                    <code>"random"</code>
+                                </label>
+                                <label for="index">
+                                    <input type="radio" id="index" name="from" value="11"> 
+                                    <code id="fromIndex">index: 11</code>
+                                </label>
+                            </div><!-- .control-vertical -->
+                        </div><!-- .control__wrapper -->
+                        
+                        <div class="control__wrapper">
+                            <div class="control-label">axis:</div>
+                            <div class="control-vertical">
+                                <label for="null">
+                                    <input type="radio" id="null" name="axis" value="null" checked> 
+                                    <code>null</code> (both)
+                                </label>
+                                <label for="x"><input type="radio" id="x" name="axis" value="x"> 
+                                    <code>"x"</code>
+                                </label>
+                                <label for="y">
+                                    <input type="radio" id="y" name="axis" value="y"> 
+                                    <code>"y"</code>
+                                </label>
+                            </div><!-- .control-vertical -->
+                        </div><!-- .control__wrapper -->
+                        
+                        <div class="control__wrapper">
+                            <div class="control-label">ease:</div>
+                            <div class="control-vertical">
+                                <label for="linear">
+                                    <input type="radio" id="linear" name="ease" value="none" checked>   
+                                    <code>"none"</code>
+                                </label>
+                                <label for="easeInOut">
+                                    <input type="radio" id="easeInOut" name="ease" value="power3.inOut">
+                                    <code>"power3.inOut"</code>
+                                </label>
+                                <label for="easeOut"><input type="radio" id="easeOut" name="ease" value="back.in"> 
+                                    <code>"back.in"</code>
+                                </label>
+                            </div><!-- .control-vertical -->
+                        </div><!-- .control__wrapper -->
+                    </div><!-- .controls__container -->
+                </div><!-- .staggers__animation -->
+            </div><!-- .staggers__container -->
+        </div><!-- .main__inner -->
+    </main>
+
+    <footer id="footer" class="footer__minimize"></footer>
+
+    <!-- SCRIPT -->
+    <script type="module" src="../src/ts/index.ts" defer></script>
+    <script type="module" src="../src/ts/gsap.ts" defer></script>
+    
+</body>
+</html>

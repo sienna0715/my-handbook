@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+/*
+ * File       : main.css
+ * Author     : SION
+ *
+ * SUMMARY:
+ * 01) INTRO
+ * 02) FEATURE INTRO
+ * 03) OUTRO
+ */
+
+
+/* ************************************** *
+ * INTRO
+ * ************************************** */
+.intro { 
+    width: 100%; 
+    height: 1300rem; 
+    position: relative; 
+    /* overflow-x: clip; 
+    background-color: #c8f9d4; 
+    background-image: radial-gradient(rthest-corner at 66% 0, #fff 0, #c8f9d4 66%), linear-gradient(#c8f9d4, #5fee83 200%); 
+    background-repeat: no-repeat; 
+    background-position: 0 0, 100% 100%; 
+    background-size: 100% 500px, 100% 300px;  */
+}
+
+.intro__container { 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.intro__background { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 0;
+    
+    & img { 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+}
+
+.intro-heading { 
+    width: 100%;
+    padding: 194rem 8rem; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 24rem; 
+    position: relative;
+    z-index: 1;
+
+    & .intro-heading__label { 
+        padding: 5rem 10rem; 
+        border: 1px solid var(--color-gray1); 
+        border-radius: 20rem; 
+    }
+
+    & .intro-heading__desc {
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    & .scroll-down__btn { 
+        display: flex; 
+        flex-direction: column; 
+        cursor: pointer; 
+    
+        & .arrow-icon { 
+            font-size: 24rem; 
+        }
+    }
+}
+
+/* Ticker */
+.ticker__container { 
+    overflow: hidden; 
+    display: flex; 
+    background-color: var(--color-white); 
+    
+    & .ticker__wrapper { 
+        height: 40rem; 
+        margin: 0 auto; 
+        overflow: hidden; 
+        display: flex; 
+        align-items: center; 
+        flex: 1 1 100%; 
+        
+        & .ticker__list { 
+            display: flex; 
+            flex: 1 0 100%; 
+            justify-content: space-around; 
+            animation: ticker 52s infinite linear; 
+        
+            & span { 
+                display: inline-block; 
+                padding: 0 16rem; 
+                font-family: 'SFMono', sans-serif; 
+                font-size: 14px; 
+                font-weight: 400; 
+                line-height: 2.5; 
+                text-transform: uppercase; 
+                white-space: nowrap; 
+            }
+        }
+    }
+
+    &:hover .ticker__list { 
+        animation-play-state: paused; 
+    }
+}
+
+@keyframes ticker {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* ************************************** *
+ * FEATURE INTRO
+ * ************************************** */
+.feature-intro { 
+    width: 100%; 
+    height: 100%;
+    padding-bottom: 100rem;
+    background: linear-gradient(to bottom, rgb(13, 17, 23) 0%, rgb(0, 0, 0) 100%); 
+    color: var(--color-white);
+}
+
+.feature-intro__container { 
+    max-width: 1280rem; 
+    margin: 0 auto; 
+    padding: 90rem 0; 
+}
+
+.motion { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    
+    & svg { 
+        color: #fff; 
+    }
+
+    & .motion__webgl { 
+        width: 150rem; 
+        height: 150rem; 
+        display: flex; 
+        justify-content: center; 
+        overflow: hidden; 
+    }
+}
+
+.feature-intro__title { 
+    text-align: center; 
+}
+
+.feature-intro__float { 
+    margin-top: 100rem; 
+
+    & .feature-intro__float-list { 
+        width: 100%; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; 
+        gap: 40rem; 
+
+        & .feature-intro__float-item { 
+            width: 300rem; 
+            height: 300rem;
+            transform: translateY(10%); 
+            opacity: 0; 
+            transition: opacity .2s; 
+            overflow: hidden; 
+        
+            > a {
+                width: 100%; 
+                height: 100%;
+                padding: 20rem 5rem;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                & .feature-intro__float-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12rem;
+                    
+                    > span {
+                        padding-bottom: 20rem;
+                        font-size: 24rem;
+                    }
+    
+                    > p {
+                        opacity: 0.7;
+                        line-height: 1.6;
+                    }
+                }
+
+                & .more__btn {
+                    > span {
+                        position: relative;
+                        opacity: 0.7;
+                        transition: opacity .2s;
+                        
+                        &::after { 
+                            content: ""; 
+                            width: 0; 
+                            height: 1rem; 
+                            position: absolute; 
+                            bottom: -6rem; 
+                            left: 0; 
+                            transition: .3s ease; 
+                            background-color: #fff;
+                        }
+                    }
+                    
+                }
+                
+
+                &:hover .more__btn span::after { 
+                    width: 100%; 
+                }
+
+                &:hover .more__btn span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+/* ************************************** *
+ * OUTRO
+ * ************************************** */
+.outro { 
+    width: 100%; 
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(2, 4, 72) 100%); 
+    color: #fff; 
+    
+    & .outro__container { 
+        max-width: 1280rem; 
+        margin: 0 auto; 
+        padding: 100rem 0; 
+
+        & .outro__content { 
+            width: 100%; 
+            text-align: center; 
+        }
+
+        & .secondary__btn { 
+            margin: 40rem 0; 
+        }
+    }
+}
+
+

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*
+ * File       : font.css
+ * Author     : SION
+ *
+ * SUMMARY:
+ * 01) Mona Sans
+ */
+
+
+
+/* ************************************** *
+ * Mona Sans
+ * ************************************** */
+@font-face {
+    font-family: 'Mona Sans';
+    font-weight: 200;
+    src: url('/assets/fonts/mona-sans/Mona-Sans-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mona Sans';
+    font-weight: 400;
+    src: url('/assets/fonts/mona-sans/Mona-Sans-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mona Sans';
+    font-weight: 700;
+    src: url('/assets/fonts/mona-sans/Mona-Sans-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Mona Sans';
+    font-weight: 900;
+    src: url('/assets/fonts/mona-sans/Mona-Sans-Bold.woff') format('woff');
+}
+
+
+
+/* ************************************** *
+ * SFMono
+ * ************************************** */
+@font-face {
+    font-family: 'SF Mono';
+    font-weight: 400;
+    src: url('/assets/fonts/sfmono/SFMonoRegular.woff') format('woff');
+}

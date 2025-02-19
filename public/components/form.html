@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form__container" action="">
+        <h2 class="form__title">Contact Info</h2>
+
+        <div class="form__fieldset">
+            <div class="form__entry">
+                <label class="form__label" for="data[0]">
+                    <span>Full Name</span>
+                </label><!-- .form__label -->
+                <div class="form__data">
+                    <input type="text" id="data[0]" class="form__field">
+                    <p class="form__explain en-text--11">Please enter it in English or Korean.</p>
+                </div><!-- .form__data -->
+            </div><!-- .form__entry -->
+    
+            <div class="form__entry">
+                <label class="form__label" for="data[1]">
+                    <span>Phone Number</span>
+                </label><!-- .form__label -->
+                <div class="form__data">
+                    <input type="text" id="data[1]" class="form__field" placeholder="010-1234-5678">
+                    <p class="form__valid en-text--11"></p>
+                </div><!-- .form__data -->
+            </div><!-- .form__entry -->
+    
+            <div class="form__entry">
+                <label class="form__label" for="data[2]">
+                    <span>Email</span>
+                </label><!-- .form__label -->
+                <div class="form__data">
+                    <input type="email" id="data[2]" class="form__field">
+                    <p class="form__valid en-text--11"></p>
+                </div><!-- .form__data -->
+            </div><!-- .form__entry -->
+        </div><!-- .form__fieldset -->
+
+        <div class="form__control">
+            <input type="submit" class="form__action" value="Submit">
+        </div><!-- .form__control-->
+    </form><!-- .form__container -->
+</body>
+</html>
