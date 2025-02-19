@@ -14,7 +14,6 @@
 /* **************************************** *
  * Import
  * **************************************** */
-import intro from './intro';
 import motion from './motion';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -22,7 +21,6 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 /* **************************************** *
  * RUN
  * **************************************** */
-intro();
 motion();
 scrollDown();
 progressBar();
