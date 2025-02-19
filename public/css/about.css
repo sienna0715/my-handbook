@@ -1,22 +1,11 @@
 @charset "utf-8";
 
-/*
- * File       : about.css
- * Author     : SION
- *
- * SUMMARY:
- * 01) SECTION
- */
-
-
- /* ************************************** *
- * SECTION
- * ************************************** */
 .about__container { 
     width: 100%; 
     height: 95vh; 
     overflow: hidden;
 }
+
 .about__background { 
     width: 100%; 
     height: 100%; 
@@ -27,25 +16,28 @@
     width: auto; 
     height: 100%; 
     position: relative; 
-}
-.comparison-slider__list { 
-    width: 100%; 
-    height: 100%; 
-    display: flex; 
-    align-items: center; 
-}
-.comparison-slider__item { 
-    width: 100%; 
-    height: auto; 
-    position: absolute; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    gap: 15rem; 
-}
-.comparison-slider__item img { 
-    width: 65%; 
-    padding: 0 100rem; 
+    
+    & .comparison-slider__list { 
+        width: 100%; 
+        height: 100%; 
+        display: flex; 
+        align-items: center; 
+        
+        & .comparison-slider__item { 
+            width: 100%; 
+            height: auto; 
+            position: absolute; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            gap: 15rem; 
+            
+            > img { 
+                width: 65%; 
+                padding: 0 100rem; 
+            }
+        }
+    }
 }
 
 .comparison-slider__item--fill { 
@@ -70,24 +62,25 @@
     cursor: ew-resize;
     background-color: aliceblue;
     opacity: 0.2;
-}
-.comparison-slider__controller-button:hover { 
-    opacity: 0.5; 
-}
-
-.drag-icon {
-    width: 50px;
-    height: 50px;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 20rem;
-    position: relative;
-    top: -220rem;
-    left: 50%;
-    transform: translateX(-50%);
+    
+    &:hover { 
+        opacity: 0.5; 
+    }
+    
+    & .drag-icon {
+        width: 50px;
+        height: 50px;
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 20rem;
+        position: relative;
+        top: -220rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .about__content {

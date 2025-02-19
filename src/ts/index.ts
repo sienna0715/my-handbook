@@ -229,5 +229,16 @@ function progressBar(): void {
             scrollBarHTML.style.width = `${scrollPercent}%`;
             (scrollBarHTML.querySelector('span') as HTMLSpanElement).textContent = `${roundScroll.toString()}%`;
         });
+
+        // Change image at 100% charge
+        document.addEventListener('scroll', (): void => {
+            const warningImg = document.querySelector('.animation__warning img') as HTMLImageElement;
+            
+            if ( (scrollBarHTML.querySelector('span') as HTMLSpanElement).textContent === '100%' ) {
+                warningImg.setAttribute('src', '/assets/images/myface-after.png');
+            } else {
+                warningImg.setAttribute('src', '/assets/images/myface.png');
+            }
+        });
     });
 }
