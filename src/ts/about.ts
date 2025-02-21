@@ -3,22 +3,28 @@ const dashedText = document.querySelector('.comparison-slider__item--dash') as H
 const filledText = document.querySelector('.comparison-slider__item--fill') as HTMLDivElement;
 const dragBtn = document.querySelector('.comparison-slider__controller-button') as HTMLButtonElement;
 
-let isDragging = false;
+export default function about() {
+    handlerMouse();
+}
 
-dragBtn.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    updateSliderPosition(e);
-});
-
-wrapper.addEventListener('mousemove', (e) => {
-    if (isDragging) {
+function handlerMouse() {
+    let isDragging = false;
+    
+    dragBtn?.addEventListener('mousedown', (e) => {
+        isDragging = true;
         updateSliderPosition(e);
-    }
-});
-
-wrapper.addEventListener('mouseup', () => {
-    isDragging = false;
-});
+    });
+    
+    wrapper?.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            updateSliderPosition(e);
+        }
+    });
+    
+    wrapper?.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+}
 
 function updateSliderPosition(e?: any) {
     const rect = wrapper.getBoundingClientRect();

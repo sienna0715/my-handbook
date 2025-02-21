@@ -9,50 +9,48 @@
  * 3) UI Function
  */
 
-
-/* **************************************** *
- * Run
- * **************************************** */
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-
 /* **************************************** *
  * Run
  * **************************************** */
-document.addEventListener('DOMContentLoaded', () => { 
-    const loadTask = [
-        loadUI('/components/tab.html').catch(error => {
-            console.error('Faild to load tab UI:', error);
-        }),
-        loadUI('/components/accordion.html').catch(error => {
-            console.error('Faild to load accordion UI:', error);
-        }),
-        loadUI('/components/form.html').catch(error => {
-            console.error('Faild to load accordion UI:', error);
-        }),
-        loadUI('/components/carousel.html').catch(error => {
-            console.error('Faild to load accordion UI:', error);
-        }),
-        loadUI('/components/toggle.html').catch(error => {
-            console.error('Faild to load accordion UI:', error);
-        }),
-        loadUI('/components/loader.html').catch(error => {
-            console.error('Faild to load accordion UI:', error);
-        }),
-    ]; 
-
-    Promise.all(loadTask)
-        .then(() => {
-            component();
-            pagination();
-        })
-        .catch( err => {
-            console.error(err);
-        })
-});
-
 export default function component() {
+    document.addEventListener('DOMContentLoaded', () => { 
+        const loadTask = [
+            loadUI('/components/tab.html').catch(error => {
+                console.error('Faild to load tab UI:', error);
+            }),
+            loadUI('/components/accordion.html').catch(error => {
+                console.error('Faild to load accordion UI:', error);
+            }),
+            loadUI('/components/form.html').catch(error => {
+                console.error('Faild to load accordion UI:', error);
+            }),
+            loadUI('/components/carousel.html').catch(error => {
+                console.error('Faild to load accordion UI:', error);
+            }),
+            loadUI('/components/toggle.html').catch(error => {
+                console.error('Faild to load accordion UI:', error);
+            }),
+            loadUI('/components/loader.html').catch(error => {
+                console.error('Faild to load accordion UI:', error);
+            }),
+        ]; 
+
+        Promise.all(loadTask)
+            .then(() => {
+                main();
+                pagination();
+            })
+            .catch( err => {
+                console.error(err);
+            })
+    });
+
+}
+
+function main() {
     dropDown();
     filterTag();
     filterCheckbox();
@@ -64,8 +62,6 @@ export default function component() {
     toggle();
     totalNum();
 }
-
-
 
 /* **************************************** *
  * Mutation Observer
@@ -599,7 +595,7 @@ function form() {
     const form = document.querySelector('.form__container') as HTMLFormElement;
     const submitBtn = document.querySelector('.form__action') as HTMLInputElement;
 
-    submitBtn.addEventListener('click', (e) => {
+    submitBtn?.addEventListener('click', (e) => {
         e.preventDefault(); 
 
         validation();
@@ -743,7 +739,7 @@ function toggle() {
     const wrapper = document.querySelector('.modal__layout.toggle') as HTMLDivElement;
     const target = document.querySelector('.toggle_btn') as HTMLDivElement;
 
-    target.addEventListener('click', () => {
+    target?.addEventListener('click', () => {
         const switchVal = document.getElementById('switch') as HTMLInputElement;
 
         if (switchVal.checked) {
@@ -759,5 +755,7 @@ function totalNum() {
     const total = document.querySelector('.total__num') as HTMLSpanElement;
     const posts = document.querySelectorAll('.posts__item') as NodeListOf<HTMLLIElement>;
 
-    total.textContent = `${posts.length} posts`;
+    if (total && posts) {
+        total.textContent = `${posts.length} posts`;
+    }
 }

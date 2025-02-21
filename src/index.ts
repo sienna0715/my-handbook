@@ -14,7 +14,10 @@
 /* **************************************** *
  * Import
  * **************************************** */
-import motion from './motion';
+import motion from './ts/motion';
+import about from './ts/about';
+import component from './ts/component';
+import gsapStagger from './ts/gsap';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -22,6 +25,9 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
  * RUN
  * **************************************** */
 motion();
+component();
+gsapStagger();
+about();
 scrollDown();
 progressBar();
 
