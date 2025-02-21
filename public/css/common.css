@@ -180,3 +180,12 @@ hr {
     margin: 0; 
     border: 1px solid rgba(191,220,255,.25); 
 }
+
+@media screen and (max-width: 540px) { 
+    .footer__container { 
+        & .footer__wrapper { 
+            flex-direction: column;
+        }
+    }
+    
+}

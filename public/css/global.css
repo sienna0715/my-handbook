@@ -158,8 +158,6 @@ main {
     justify-content: center; 
 }
 
-
-
 /* ************************************** *
  * Intersection Observer
  * ************************************** */
@@ -175,11 +173,16 @@ main {
     }
 }
 
-
-
  /* ************************************** *
  * scroll
  * ************************************** */
 body::-webkit-scrollbar { width: 10rem; }
 body::-webkit-scrollbar-thumb { border-radius: 10rem; background: var(--color-gray3); }
 body::-webkit-scrollbar-track { background: var(--color-gray2); }
+
+/* **************************************** *
+ * Responsive
+ * **************************************** */
+@media screen and (max-width: 540px) {
+    .title-text--01 { font-size: 36rem; line-height: 1.08; font-weight: 900; letter-spacing: 0; }
+}
