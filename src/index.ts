@@ -34,15 +34,19 @@ progressBar();
 scrollVisibility('.feature-intro__float-item');
 
 document.addEventListener('DOMContentLoaded', () => { 
-    loadHTML('/components/header.html').catch(error => {
+    loadHTML('/components/header.html')
+    .then(() => {
+        hambugerMenu();
+    }).catch(error => {
         console.error('Faild to load header:', error);
     });
 });
 
 document.addEventListener('DOMContentLoaded', () => { 
-    loadHTML('/components/footer.html').catch(error => {
-        console.error('Faild to load footer:', error);
-    });
+    loadHTML('/components/footer.html')
+        .catch(error => {
+            console.error('Faild to load footer:', error);
+        });
 });
 
 
@@ -244,5 +248,15 @@ function progressBar(): void {
                 warningImg.setAttribute('src', '/assets/images/myface.png');
             }
         });
+    });
+}
+
+function hambugerMenu(): void {
+    const header = document.getElementById('header') as HTMLElement;
+    const menu = document.getElementById('menuToggle') as HTMLDivElement;
+
+    menu?.addEventListener('click', () => {
+        console.log('menu click'); 
+        header?.classList.toggle('menu--open');
     });
 }

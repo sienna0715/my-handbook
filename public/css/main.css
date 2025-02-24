@@ -29,7 +29,8 @@
 .intro__container { 
     width: 100%; 
     height: 100%; 
-    overflow: hidden; 
+    overflow: hidden;
+    padding: 0 20rem;
 }
 
 .intro__background { 
@@ -139,7 +140,7 @@
 .feature-intro__container { 
     max-width: 1280rem; 
     margin: 0 auto; 
-    padding: 90rem 0; 
+    padding: 90rem 20rem; 
 }
 
 .motion { 
@@ -258,7 +259,8 @@
 
         & .outro__content { 
             width: 100%; 
-            text-align: center; 
+            text-align: center;
+            padding: 0 60rem;
         }
 
         & .secondary__btn { 
@@ -267,4 +269,23 @@
     }
 }
 
+/* ************************************** *
+ * MEDIA QUERIES
+ * ************************************** */
+@media screen and (max-width: 1024px) { 
 
+    .feature-intro__float .feature-intro__float-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .feature-intro { 
+        padding-bottom: 0;
+    }
+
+    .outro__content br {
+        display: none;
+    }
+    
+}

@@ -184,5 +184,9 @@ body::-webkit-scrollbar-track { background: var(--color-gray2); }
  * Responsive
  * **************************************** */
 @media screen and (max-width: 540px) {
+    br { display: none; }
+
     .title-text--01 { font-size: 36rem; line-height: 1.08; font-weight: 900; letter-spacing: 0; }
+    .en-text--04 { font-size: 46rem; line-height: 1; font-weight: 400; letter-spacing: 0; }
+    .title-text--04 { font-size: 18rem; line-height: 1.33; font-weight: 900; letter-spacing: 0; }
 }
