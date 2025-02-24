@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* ************************************** */
+/* MEDIA QUERY
+/* ************************************** */
+@media (max-width: 540px) {
+    .feature__inner {
+        flex-direction: column;
+    }
+}

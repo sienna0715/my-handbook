@@ -113,7 +113,9 @@
         }
 
         & .footer__container { 
-            min-width: 1280rem; 
+            max-width: 1280rem;
+            width: 100%;
+            padding: 0 24rem;
             flex-direction: row-reverse; 
             justify-content: space-between;
 
@@ -147,36 +149,36 @@
 .footer__container { 
     display: flex; 
     flex-direction: column; 
-    
-    & .footer__wrapper { 
-        width: 100%; 
-        max-width: 1280rem; 
-        padding: 48rem; 
-        margin: 0 auto; 
-        display: flex; 
-        justify-content: center; 
-        flex-direction: row; 
-        justify-content: space-between; 
-        align-items: center; 
-        box-sizing: border-box; 
-        
-        & .flogo { 
-            display: flex; 
-            flex-direction: column; 
-            
-            & span { 
-                line-height: 1; 
-            }
-        }
+}
 
-        & .sns__list { 
-            display: flex; 
-            gap: 15rem; 
-            
-            & .icon { 
-                font-size: 26rem; 
-            }
-        }
+.footer__wrapper { 
+    width: 100%; 
+    max-width: 1280rem; 
+    padding: 48rem; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing: border-box; 
+}
+
+.flogo { 
+    display: flex; 
+    flex-direction: column; 
+    
+    & span { 
+        line-height: 1; 
+    }
+}
+
+.sns__list { 
+    display: flex; 
+    gap: 15rem; 
+    
+    & .icon { 
+        font-size: 26rem; 
     }
 }
 
@@ -189,7 +191,7 @@ hr {
 /* ************************************** *
 * MEDIA QUERY
 * ************************************** */
-@media screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
     /* HEADER */
     #header .menu { display: none; }
     #header .single-btn__wrapper { display: none; }
@@ -279,16 +281,35 @@ hr {
     
 }
 
-@media screen and (max-width: 540px) {
+@media (max-width: 540px) {
+    /* HEADER */
+    .header__inner { 
+        padding: 8rem 18rem 8rem 18rem; 
+        margin: 16rem 24rem;
+    }
     #logo a  { gap: 12rem; }
     #logo a .icon { font-size: 20rem; }
 
     /* FOOTER */
-    .footer__container { 
-        & .footer__wrapper { 
-            flex-direction: column;
-            gap: 20rem;
-        }
+
+    .footer__wrapper {
+        padding: 30rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20rem;
+    }
+    #footer.footer__minimize {
+        height: 10vh;
+    }
+
+    #footer.footer__minimize .footer__container { 
+        flex-direction: column;
+        justify-content: center;
+        gap: 10rem;
+    }
+
+    .sns__list .icon {
+        font-size: 20rem;
     }
     
 }

@@ -133,7 +133,7 @@ main {
     flex-direction: column; 
     align-items: center; 
     gap: 24rem; 
-    padding: 96rem 0; 
+    padding: 96rem 40rem;
     text-align: center;
 }
 
@@ -213,7 +213,10 @@ body::-webkit-scrollbar-track { background: var(--color-gray2); }
     html.safari { font-size: 0.2564102564102564vw; }
     br { display: none; }
 
-    .title-text--01 { font-size: 36rem; line-height: 1.08; font-weight: 900; letter-spacing: 0; }
+    /* TYPOGRAPHY */
     .en-text--04 { font-size: 46rem; line-height: 1; font-weight: 400; letter-spacing: 0; }
+
+    .title-text--01 { font-size: 36rem; line-height: 1.08; font-weight: 900; letter-spacing: 0; }
+    .title-text--02 { font-size: 38rem; line-height: 1; font-weight: 900; letter-spacing: 0; }
     .title-text--04 { font-size: 18rem; line-height: 1.33; font-weight: 900; letter-spacing: 0; }
 }
