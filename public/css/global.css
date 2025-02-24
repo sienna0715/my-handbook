@@ -30,7 +30,7 @@ caption, th, td { text-align: left; font-weight: normal; }
 figure, article, header, footer, nav, hgroup, video, audio, aside, main { display: block; }
 
 html { font-size: 6.25%; scroll-behavior: smooth; }
-html.safari.desktop { font-size: 1px; }
+html.safari { font-size: 1px; }
 
 body { overflow-x: hidden; font-family: 'Mona Sans', sans-serif; font-size: 16rem; word-break: keep-all; }
 a { color: #000; text-decoration: none; }
@@ -183,7 +183,34 @@ body::-webkit-scrollbar-track { background: var(--color-gray2); }
 /* **************************************** *
  * Responsive
  * **************************************** */
-@media screen and (max-width: 540px) {
+@media (max-width: 1900px){
+    html,
+    html.safari { font-size: 0.0526vw; }
+}
+
+@media (max-width: 1600px){
+    html,
+    html.safari { font-size: 0.0625vw; }
+}
+
+@media (max-width: 1200px){
+    html,
+    html.safari { font-size: 0.0833333333333333vw; }
+}
+
+@media (max-width: 1023px){
+    html,
+    html.safari { font-size: 0.09775171065493645vw; }
+}
+
+@media (max-width: 860px){
+    html,
+    html.safari { font-size: 0.13020833333333335vw; }
+}
+
+@media (max-width: 540px) {
+    html,
+    html.safari { font-size: 0.2564102564102564vw; }
     br { display: none; }
 
     .title-text--01 { font-size: 36rem; line-height: 1.08; font-weight: 900; letter-spacing: 0; }
