@@ -30,7 +30,7 @@ caption, th, td { text-align: left; font-weight: normal; }
 figure, article, header, footer, nav, hgroup, video, audio, aside, main { display: block; }
 
 html { font-size: 6.25%; scroll-behavior: smooth; }
-html.safari.desktop { font-size: .05254860746190226vw; }
+html.safari.desktop { font-size: 1px; }
 
 body { overflow-x: hidden; font-family: 'Mona Sans', sans-serif; font-size: 16rem; word-break: keep-all; }
 a { color: #000; text-decoration: none; }

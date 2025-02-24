@@ -49,6 +49,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
+(function () {
+    const html = document.documentElement;
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    function updateDeviceClass() {
+        // 기존 클래스 제거
+        html.classList.remove('mobile', 'tablet', 'desktop');
+
+        // 현재 화면 너비 확인 후 클래스 추가
+        if (window.innerWidth >= 1024) {
+            html.classList.add('desktop');
+        } else if (window.innerWidth >= 768) {
+            html.classList.add('tablet');
+        } else {
+            html.classList.add('mobile');
+        }
+    }
+
+    // Safari 감지 후 클래스 추가
+    if (isSafari) {
+        html.classList.add('safari');
+    }
+
+    // 초기 로딩 시 클래스 설정
+    updateDeviceClass();
+
+    // 화면 크기 변경 시 클래스 업데이트
+    window.addEventListener('resize', updateDeviceClass);
+})();
 
 
 /* **************************************** *
