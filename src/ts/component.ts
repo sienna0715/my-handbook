@@ -689,7 +689,7 @@ function carousel() {
             stretch: 0,          // 슬라이드 간 거리
         },
         centeredSlides: true,
-        slidesPerView: 5, // 한 번에 보여질 슬라이드 수
+        slidesPerView: 1, // 한 번에 보여질 슬라이드 수
         spaceBetween: 0, // 슬라이드 간 간격 (px)
         loop: true, // 무한 루프
 
