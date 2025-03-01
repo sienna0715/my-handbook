@@ -16,8 +16,8 @@
 
 .animation__figure {
     position: relative;
-    width: 100%;
-    padding-top: 100%;
+    width: 60%;
+    padding-top: 60%;
     overflow: hidden;
 
     & img {
